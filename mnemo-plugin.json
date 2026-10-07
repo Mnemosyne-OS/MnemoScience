@@ -1,0 +1,46 @@
+{
+  "name": "@mnemosyne-plugins/mnemo-science",
+  "displayName": "MnemoScience",
+  "version": "0.2.0",
+  "category": "Memory",
+  "vendor": "Mnemosyne Labs",
+  "license": "MIT",
+  "description": "Science texts in your memory, by field: physics, chemistry, biology, mathematics, astronomy and the history of science. Pick an OpenStax textbook (licence per book), Wikipedia pages by category in English, French or Spanish (CC BY-SA 4.0), PlanetMath (CC BY-SA 3.0), MacTutor biographies (CC BY-SA 4.0), OEIS sequences (CC BY-SA 4.0) or arXiv abstracts (licence per article): MnemoScience downloads the texts, keeps a copy in your knowledge folder and writes them into one memory pack per field, each memory closed by a line naming its source, date and licence.",
+  "descriptionI18n": {
+    "en": "Science texts in your memory, by field: physics, chemistry, biology, mathematics, astronomy and the history of science. Pick an OpenStax textbook (licence per book), Wikipedia pages by category in English, French or Spanish (CC BY-SA 4.0), PlanetMath (CC BY-SA 3.0), MacTutor biographies (CC BY-SA 4.0), OEIS sequences (CC BY-SA 4.0) or arXiv abstracts (licence per article): MnemoScience downloads the texts, keeps a copy in your knowledge folder and writes them into one memory pack per field, each memory closed by a line naming its source, date and licence.",
+    "fr": "Des textes de science dans ta mémoire, par domaine : physique, chimie, biologie, mathématiques, astronomie et histoire des sciences. Choisis un manuel OpenStax (licence propre à chaque livre), des pages Wikipédia par catégorie en anglais, français ou espagnol (CC BY-SA 4.0), PlanetMath (CC BY-SA 3.0), les biographies de MacTutor (CC BY-SA 4.0), des suites de l'OEIS (CC BY-SA 4.0) ou des résumés arXiv (licence par article) : MnemoScience télécharge les textes, en garde une copie dans ton dossier des connaissances et les écrit dans un pack de mémoire par domaine, chaque mémoire finissant par une ligne qui nomme sa source, sa date et sa licence.",
+    "es": "Textos de ciencia en tu memoria, por campo: física, química, biología, matemáticas, astronomía e historia de la ciencia. Elige un libro de texto OpenStax (licencia propia de cada libro), páginas de Wikipedia por categoría en inglés, francés o español (CC BY-SA 4.0), PlanetMath (CC BY-SA 3.0), las biografías de MacTutor (CC BY-SA 4.0), sucesiones de la OEIS (CC BY-SA 4.0) o resúmenes de arXiv (licencia por artículo): MnemoScience descarga los textos, guarda una copia en tu carpeta de conocimientos y los escribe en un paquete de memoria por campo; cada recuerdo termina con una línea que nombra su fuente, su fecha y su licencia."
+  },
+  "keywords": [
+    "arxiv",
+    "astronomy",
+    "biology",
+    "chemistry",
+    "history of science",
+    "mathematics",
+    "oeis",
+    "openstax",
+    "physics",
+    "science",
+    "wikipedia"
+  ],
+  "permissions": [
+    "vault:write",
+    "vault:read",
+    "dialog:open"
+  ],
+  "updateStrategy": "git",
+  "entrypoints": {
+    "renderer": "index.html"
+  },
+  "widgets": [
+    {
+      "id": "mnemo-science-main",
+      "icon": "🔭",
+      "name": "MnemoScience",
+      "route": "index.html",
+      "defaultWidth": 760,
+      "defaultHeight": 780
+    }
+  ]
+}

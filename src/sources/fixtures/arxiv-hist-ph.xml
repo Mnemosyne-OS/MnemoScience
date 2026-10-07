@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/FXvBVXKmwqYJJdshODXBdnawMnc</id>
+  <title>arXiv Query: search_query=cat:physics.hist-ph&amp;id_list=&amp;start=0&amp;max_results=3</title>
+  <updated>2026-10-04T06:18:04Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=cat:physics.hist-ph&amp;start=0&amp;max_results=3&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>3</opensearch:itemsPerPage>
+  <opensearch:totalResults>5746</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.38292v1</id>
+    <title>On Gauge Gravity's 'Hypermomentum Challenge' to the Geometric Trinity</title>
+    <updated>2026-09-29T17:23:38Z</updated>
+    <link href="https://arxiv.org/abs/2609.38292v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.38292v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Claims concerning a dynamical equivalence between general relativity and two reformulations of it, in which gravity is encoded in torsion and non-metricity respectively, have attracted some attention. If taken to be true, this 'Geometric Trinity' suggests that it is impossible to determine, even in principle, whether one inhabits a spacetime solution possessing curvature, torsion or non-metricity (insofar as the probes of geometry are paths of test particles). This claim is in direct tension with the long tradition of studying gravity as a gauge theory, in which distinct geometric attributes couple to distinct properties of matter (such as energy-momentum to curvature and spin angular momentum to torsion). In this short paper, I compare these two conflicting frameworks for geometrizing spacetime and describe the precise source, nature and implications of their disagreement. The equivalence claim holds only under a substantive restriction on the matter sector, namely that matter does not couple to an independent affine connection. Because the relevant couplings remain beyond current empirical reach, the choice between the frameworks turns on a trade-off among ontological, epistemic, and methodological forms of parsimony.</summary>
+    <category term="physics.hist-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="gr-qc" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-29T17:23:38Z</published>
+    <arxiv:comment>18 pages, no figures. Comments welcome</arxiv:comment>
+    <arxiv:primary_category term="physics.hist-ph"/>
+    <author>
+      <name>Kartik Tiwari</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.36207v1</id>
+    <title>What is Physics For? Why Classical Physics is not the Limit of Quantum Mechanics</title>
+    <updated>2026-09-28T20:08:46Z</updated>
+    <link href="https://arxiv.org/abs/2609.36207v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.36207v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Quantum mechanics is justifiably held to be the most successful physical theory ever created; yet no universally accepted interpretation of its mathematical formalism exists after a century of debate. We examine the specific claim that classical physics stands as the low-action limit of quantum mechanics, arguing that the deep interpretive difficulties exposed by the quantum formalism, the measurement problem, the subject-object divide, and the nature of scientific representation, were already latent in classical physics, constituting what we call a blind spot of objectivity. Taking quantum theory as an invitation to re-examine the implicit metaphysical commitments bundled with 'classical physics', we explore two key issues-the objective/subjective split and the nature of theoretical representation-and argue that quantum mechanics does not represent a break with classical physics per se but rather brings previously unacknowledged philosophical assumptions into the limelight. We discuss the London-Bauer interpretation and QBism as exemplars of interpretations that embrace this broader reconceptualisation.</summary>
+    <category term="physics.hist-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-28T20:08:46Z</published>
+    <arxiv:comment>26 pages. This chapter will appear in a volume edited by Chris Fuchs and Jacques Pienaar</arxiv:comment>
+    <arxiv:primary_category term="physics.hist-ph"/>
+    <author>
+      <name>Adam Frank</name>
+    </author>
+    <author>
+      <name>Jacques L. Pienaar</name>
+    </author>
+    <author>
+      <name>Michel Bitbol</name>
+    </author>
+    <author>
+      <name>Harald Wiltsche</name>
+    </author>
+    <author>
+      <name>Gabriela Barreto Lemos</name>
+    </author>
+    <author>
+      <name>Marcelo Gleiser</name>
+    </author>
+    <author>
+      <name>Marcus Appleby</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.35198v1</id>
+    <title>Similarities between the speed limit in relativity and the sound barrier in inviscid fluid flows</title>
+    <updated>2026-09-28T13:57:18Z</updated>
+    <link href="https://arxiv.org/abs/2609.35198v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.35198v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Prandtl-Glauert-Lorentz transformation establishes a deep mathematical correspondence between compressible potential flow theory and special relativity. Despite being implicit in the aerodynamic literature since the early twentieth century, this analogy remains largely unrecognised across the two communities and has never been surveyed in a unified manner. This review presents, in a self-contained and pedagogical framework accessible to both communities, the historical, mathematical, and applied dimensions of this correspondence. After tracing the parallel developments that gave rise to compressible aerodynamic theory and special relativity, we establish the formal equivalence between the Lorentz transformation and the Prandtl-Glauert coordinate change, and reinterpret relativistic concepts such as time dilation, the Doppler effect, and the Lorentz factor within the acoustic framework. Thanks to the added mass concept, we finally extend this analogy and show that the whole mathematical framework of special relativity is exactly mirrored by the linearised compressible potential flow theory.</summary>
+    <category term="physics.class-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.hist-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-28T13:57:18Z</published>
+    <arxiv:primary_category term="physics.class-ph"/>
+    <arxiv:journal_ref>Physics of Fluids, 2026, 38 (9), pp.096112</arxiv:journal_ref>
+    <author>
+      <name>F Salmon</name>
+      <arxiv:affiliation>UBM</arxiv:affiliation>
+    </author>
+  </entry>
+</feed>
