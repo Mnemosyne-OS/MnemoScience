@@ -150,11 +150,14 @@ export function stateSize(lib: LibraryState): number {
 export function withPack(lib: LibraryState, entry: PackEntry, budget = STATE_BUDGET): LibraryState {
   const others = lib.packs.filter((p) => p.key !== entry.key).sort((a, b) => (a.updatedAt < b.updatedAt ? 1 : -1));
   let next: LibraryState = { ...lib, packs: [entry, ...others], archived: { ...lib.archived } };
-  for (let i = next.packs.length - 1; i >= 1 && stateSize(next) > budget; i--) {
-    if (next.packs[i]!.done) {
-      const { done: _dropped, ...rest } = next.packs[i]!;
-      next = { ...next, packs: next.packs.map((p, j) => (j === i ? rest : p)) };
-    }
+  for (let i = next.packs.length - 1; i >= 1; i--) {
+    // A pack whose keys are already gone changes nothing: measure only before
+    // a strip. Serialising the whole state for every pack walked made one
+    // call quadratic (200 lists: 8 s locally, past 30 s on a CI runner).
+    if (!next.packs[i]!.done) continue;
+    if (stateSize(next) <= budget) break;
+    const { done: _dropped, ...rest } = next.packs[i]!;
+    next = { ...next, packs: next.packs.map((p, j) => (j === i ? rest : p)) };
   }
   while (next.packs.length > 1 && stateSize(next) > budget) {
     const old = next.packs[next.packs.length - 1]!;

@@ -1,8 +1,9 @@
 {
   "name": "@mnemosyne-plugins/mnemo-science",
   "displayName": "MnemoScience",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "category": "Memory",
+  "icon": "icon.svg",
   "vendor": "Mnemosyne Labs",
   "license": "MIT",
   "description": "Science texts in your memory, by field: physics, chemistry, biology, mathematics, astronomy and the history of science. Pick an OpenStax textbook (licence per book), Wikipedia pages by category in English, French or Spanish (CC BY-SA 4.0), PlanetMath (CC BY-SA 3.0), MacTutor biographies (CC BY-SA 4.0), OEIS sequences (CC BY-SA 4.0) or arXiv abstracts (licence per article): MnemoScience downloads the texts, keeps a copy in your knowledge folder and writes them into one memory pack per field, each memory closed by a line naming its source, date and licence.",

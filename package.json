@@ -1,6 +1,6 @@
 {
   "name": "@mnemosyne-plugins/mnemo-science",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "type": "module",
   "description": "Science in memory: OpenStax textbooks, Wikipedia by category, PlanetMath, MacTutor, OEIS and arXiv abstracts, written into one memory pack per field with a source line under every memory. The cartridge ships no science text.",

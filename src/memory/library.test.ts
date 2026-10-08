@@ -234,6 +234,6 @@ describe('withPack keeps the state far under 256 KB', () => {
     // The newest pack keeps its keys, so it can still resume a grown list.
     expect(lib.packs[0]!.key).toBe(`${def.id}|list199`);
     expect(lib.packs[0]!.done).toHaveLength(3334);
-    // A deliberate worst case (200 x 3 334 keys): ~9 s, over vitest's 5 s default.
+    // A deliberate worst case (200 x 3 334 keys): ~0.4 s since withPack measures only before a strip.
   }, 30_000);
 });
