@@ -21,7 +21,7 @@
  * unreadable library writes nothing, offers no import, and says so.
  */
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { MnemoCartridgeSDK } from './sdk/mnemo-sdk';
+import { sdk } from './host';
 import { useI18n } from './i18n/useI18n';
 import { translate } from './i18n/strings';
 import { sourceById } from './domains';
@@ -37,10 +37,9 @@ import { Home } from './ui/Home';
 import { DomainView } from './ui/DomainView';
 import { SourceView } from './ui/SourceView';
 import { Footer } from './ui/Footer';
+import { ScienceAgentActions } from './ui/ScienceAgentActions';
 import type { ImportRequest, Job, LibRead, View } from './ui/types';
 
-// Must match "name" in mnemo-plugin.json: the host keys the Memory Packs on it.
-const sdk = new MnemoCartridgeSDK('@mnemosyne-plugins/mnemo-science');
 
 /** Every host call is local IPC; 15 s is the house default (rule 9). */
 const HOST_TIMEOUT_MS = 15_000;
@@ -106,10 +105,14 @@ export default function App() {
   // Cancel any running read when the window goes away.
   useEffect(() => () => abortRef.current?.abort(), []);
 
-  const openExternal = (url: string) => {
+  /** The « site » link: null once the host opened it, else the reason (also shown). An agent's openSite waits on it. */
+  const openExternal = (url: string): Promise<string | null> =>
     sdk.invoke('shell.openExternal', { url }, HOST_TIMEOUT_MS)
-      .catch((err) => setNotice([t('import.failed', { why: errText(err) })]));
-  };
+      .then(() => null, (err: unknown) => {
+        const why = errText(err);
+        setNotice([t('import.failed', { why })]);
+        return why;
+      });
 
   // ── The Memory Pack of a field: its vault and the copy folder ─────────
   // Pack → vault name and folder, for this window's life (the host answers the same).
@@ -257,6 +260,9 @@ export default function App() {
           onStop={() => abortRef.current?.abort()}
         />
       )}
+
+      {/* What an agent may do here (doc 149): the same tiles and Stop the person uses. */}
+      <ScienceAgentActions view={view} lib={lib} libRead={libRead} job={job} notice={notice} go={go} stop={() => abortRef.current?.abort()} openSite={openExternal} />
 
       <Footer
         t={t}
